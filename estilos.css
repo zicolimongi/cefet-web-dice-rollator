@@ -1,0 +1,148 @@
+html {
+  height: 100%;
+  overflow-y: hidden;
+}
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: 'Inconsolata', monospace;
+}
+
+#cabecalho {
+  box-sizing: border-box;
+  height: 80px;
+  padding: 15px;
+  background-image: linear-gradient(to bottom right, #444, #111, #000);
+  color: white;
+  box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+}
+
+#cabecalho h1 {
+  margin: 0;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  font-size: 40px;
+  font-family: 'Nova Mono', monospace;
+}
+
+.handwritten {
+  font-family: 'Merienda One', cursive;
+  font-weight: 100;
+  font-style: oblique;
+  color: white;
+  -webkit-text-stroke: 1px white;
+
+  -webkit-animation: brilhando 1.8s linear 0s infinite alternate,
+                     falhando 5s steps(50) 0 infinite alternate;
+}
+
+@-webkit-keyframes brilhando {
+  from {
+    text-shadow: 2px  2px 4px rgba(255,255,255,.5),
+                 2px -2px 4px rgba(255,255,255,.5),
+                -2px -2px 4px rgba(255,255,255,.5),
+                -2px  2px 4px rgba(255,255,255,.5);
+  }
+  to {
+    text-shadow: 2px  2px 20px rgba(255,255,255,.8),
+                 2px -2px 20px rgba(255,255,255,.8),
+                -2px -2px 20px rgba(255,255,255,.8),
+                -2px  2px 20px rgba(255,255,255,.8);
+  }
+}
+
+@-webkit-keyframes falhando {
+  0% {
+    -webkit-text-stroke: 1px rgb(232, 104, 143);
+    letter-spacing: 0;
+  }
+  2% {
+    -webkit-text-stroke: 1px rgb(232, 0, 0);
+  }
+  4% {
+    -webkit-text-stroke: 1px rgb(232, 104, 143);
+  }
+  6% {
+    -webkit-text-stroke: 1px rgb(232, 197, 197);
+  }
+  8% {
+    -webkit-text-stroke: 1px white;
+  }
+
+}
+
+@-webkit-keyframes colorchange {
+	0% {
+		-webkit-text-stroke: 10px red;
+		letter-spacing: 0;
+	}
+	100% {
+		-webkit-text-stroke: 20px green;
+	}
+}
+
+
+#controles {
+  text-align: center;
+}
+
+.dado {
+  display: inline-block;
+  width: 60px;
+  border: 1px solid rgba(155,155,155, .5);
+}
+
+.dado label {
+  display: block;
+}
+
+.imagemDado {
+  width: 60px;
+  height: 60px;
+}
+
+.dado input {
+  display: block;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#rolar {
+  display: block;
+  width: 200px;
+  margin: 30px auto;
+  background-image: linear-gradient(to bottom, rgb(253, 166, 6), rgb(252, 142, 8));
+  border: 1px solid black;
+  padding: 5px 10px;
+  padding: 6px 14px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#rolar:hover,
+#rolar:active {
+  background-image: linear-gradient(to bottom, rgb(253, 206, 46), rgb(252, 182, 48));
+  border: 1px solid #333;
+  color: #111;
+}
+
+#rolar:active {
+  color: #333;
+}
+
+
+#recipienteResultados {
+  height: 100%;
+  text-align: center;
+  background-color: lightslategrey;
+  padding: 15px;
+  transition: all 600ms ease-out;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#recipienteResultados.oculto {
+  transform: translateY(70px);
+  opacity: 0;
+}

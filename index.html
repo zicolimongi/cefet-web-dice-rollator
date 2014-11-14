@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dice Rollator Tabajara</title>
+  <link href='https://fonts.googleapis.com/css?family=Nova+Mono|Merienda+One|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header id="cabecalho">
+    <h1>RPG Dice Rollator <span class="handwritten">Tabajara</span></h1>
+  </header>
+  <section id="controles">
+    <h2>Escolha seus dados</h2>
+    <!-- d4 -->
+    <div class="dado">
+      <label for="qtdeD4">
+        <img src="img/d4.png" class="imagemDado">
+      </label>
+      <input type="number" min="0" max="10" value="0" id="quantidadeD4" name="qtdeD4">
+    </div>
+
+    <!-- d6 -->
+    <div class="dado">
+      <label for="qtdeD6">
+        <img src="img/d6.png" class="imagemDado">
+      </label>
+      <input type="number" min="0" max="10" value="0" id="quantidadeD6" name="qtdeD6">
+    </div>
+
+    <!-- d8 -->
+    <div class="dado">
+      <label for="qtdeD8">
+        <img src="img/d8.png" class="imagemDado">
+      </label>
+      <input type="number" min="0" max="10" value="0" id="quantidadeD8" name="qtdeD8">
+    </div>
+
+    <!-- d10 -->
+    <div class="dado">
+      <label for="qtdeD10">
+        <img src="img/d10.png" class="imagemDado">
+      </label>
+      <input type="number" min="0" max="10" value="0" id="quantidadeD10" name="qtdeD10">
+    </div>
+
+    <!-- d12 -->
+    <div class="dado">
+      <label for="qtdeD12">
+        <img src="img/d12.png" class="imagemDado">
+      </label>
+      <input type="number" min="0" max="10" value="0" id="quantidadeD12" name="qtdeD12">
+    </div>
+
+    <!-- d20 -->
+    <div class="dado">
+      <label for="qtdeD20">
+        <img src="img/d20.png" class="imagemDado">
+      </label>
+      <input type="number" min="0" max="10" value="0" id="quantidadeD20" name="qtdeD20">
+    </div>
+
+    <button type="button" id="rolar">Rolar</button>
+  </section>
+  <section id="recipienteResultados" class="oculto">
+    <h2>Resultado</h2>
+    <div id="resultado"></div>
+  </section>
+  <script src="principal.js"></script>
+</body>
+</html>
